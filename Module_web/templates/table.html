@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content%}
+<table class="tableau-style" style="font-size: 12px;">
+  <thead>
+    <tr>
+      <th></th>
+      <th>CAMEROUN</th>
+      <th>GABON</th>
+      <th>GUINEE</th>
+      <th>CONGO</th>
+      <th>TCHAD</th>
+      <th>RCA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> Esp en 2016</td>
+      <td>{{powo[0]}} </td>
+      <td>{{powo[1]}}  </td>
+      <td>{{powo[2]}}  </td>
+      <td>{{powo[3]}}  </td>
+      <td>{{powo[4]}}  </td>
+      <td>{{powo[5]}}  </td>
+    </tr>
+  </tbody>
+</table>
+<center>
+  <h1>Diagramme de l'esperence de vie en 2016 pour les pays de l'afrique centrale</h1>
+    <img id="hotel" class="graph bar" alt="hotel stat" src="data:image/jpeg;base64,{{hos}}">
+  </center>
+{% endblock%}

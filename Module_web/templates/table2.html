@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content%}
+
+<p>Toutes nos réponses sont justifiées par les graphes au bas de la page et au lien qui nous renvoi au
+   notebook jupyter ou nous avons fais notre analyse.
+   Notre Modèle utilisé est une regression linéaire multiple fait avec les variables les plus significatives.
+   Le Modèle predit efficacement a 97%.
+</p>
+ <div>
+   
+   <ol>
+      <li></li>
+      <p> Les Différents facteurs prédictifs initialement choisi n'affecttent pas tous l'esperance de vie de manière individuelle.
+          nous pouvons citer :Le taux de mortalité chez les adultes, Le taux de scolarisation qui affectent sur l'espérance de vie
+
+      </p>
+      <p></p>
+      <li> </li>
+      <p>Les variables Predictrices qui affecttent reéllement l'esperance de vie sont : la variable Schooling, Icome 
+          composition  of Recource = Indice de developpement humain(IDH),Adult mortality,HIV,BMI
+      </p>
+      <p></p>
+         <li></li>
+        <p>
+         Oui, un pays ayant une espérance de vie plus faible devrait envisager d'augmenter ses dépenses de santé afin
+          d'améliorer sa durée de vie moyenne. Investir dans des programmes de santé maternelle et infantile, des soins
+           préventifs et des traitements pour les maladies courantes peut contribuer à réduire les taux de mortalité 
+           infantile et adulte, ce qui à son tour peut augmenter l'espérance de vie de la population. En outre, 
+           l'amélioration de l'accès aux soins de santé et la qualité des services de santé peuvent également contribuer
+            à une meilleure santé globale de la population, ce qui peut avoir un impact positif sur l'espérance de vie.
+             En fin de compte, l'investissement dans la santé est crucial pour améliorer la durée de vie moyenne d'une 
+             population.
+        </p> 
+        <p></p>
+        <li></li>
+        <p>
+         Les taux de mortalité infantile et adulte ont un impact direct sur l'espérance de vie d'une population. 
+         En général, des taux de mortalité infantile élevés réduisent l'espérance de vie car un grand nombre d'enfants 
+         meurent avant d'atteindre l'âge adulte. De même, des taux de mortalité adulte élevés réduisent également 
+         l'espérance de vie en diminuant la durée de vie moyenne des adultes. En revanche, des taux de mortalité 
+         infantile et adulte plus faibles ont tendance à augmenter l'espérance de vie en permettant à un plus grand 
+         nombre de personnes de vivre jusqu'à un âge avancé.
+        </p>
+
+   </ol>
+  
+ </div> 
+ <p style="color: rgb(135, 245, 9);"> lien<a href="{{url_for('static',filename='Explication.html')}}">notebook</a></p>
+
+ <h4>Graphe des correlation</h4>
+ <img src="{{url_for('static',filename='correlation.png')}}">
+ <h4>Graphe de correlation Ordonée</h4>
+ <img src="{{url_for('static',filename='d.png')}}">
+ <p>Dans notre Analyse nous avons remarqué quelque pays qui ne s'ajustaient pas a notre Modèle nous pouvons citer la 
+   France, le Canada ... ect .3% des pays ne donnerons pas de  bonnes prédictions. 
+ </p>
+ <p>
+   Pour la variable Schooling le choix doit être fait dans l'intervalle [0.0, 20.7]
+   Pour la variable Icome =IDH le choix doit être fait dans l'intervalle [0.0, 1]
+ </p>
+{% endblock%}
+
